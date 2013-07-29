@@ -35,24 +35,15 @@
   <script>
     Polymer('toc', {
       ready: function() {
-        var headings = [],
-            tocHTML  = '';
-
-        headings.push(document.getElementsByTagName('h1'));
-        headings.push(document.getElementsByTagName('h2'));
-        headings.push(document.getElementsByTagName('h3'));
-        headings.push(document.getElementsByTagName('h4'));
-        headings.push(document.getElementsByTagName('h5'));
-        headings.push(document.getElementsByTagName('h6'));
+        var tocHTML  = '';
+        var headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
         for (var i = 0; i < headings.length; i++) {
-          for (var j = 0; j < headings[i].length; j++) {
-            if (headings[i][j].id) {
-              title   = headings[i][j].textContent;
-              link    = headings[i][j].id;
-              item    = '<li><a href="#' + link + '">' + title + '</a></li>';
-              tocHTML += item;
-            }
+          if (headings[i].id) {
+            title   = headings[i].textContent;
+            link    = headings[i].id;
+            item    = '<li><a href="#' + link + '">' + title + '</a></li>';
+            tocHTML += item;
           }
         }
 
