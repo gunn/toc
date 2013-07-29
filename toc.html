@@ -5,6 +5,31 @@
       <h2>Table of contents</h2>
       <ul id="tocList"></ul>
     </nav>
+
+    <style>
+      .table-of-contents {
+        float: right;
+        width: 40%;
+        background: #eee;
+        font-size: 0.8em;
+        padding: 1em 2em;
+        margin: 0 0 0.5em 1.5em;
+      }
+      .table-of-contents ul {
+        padding: 0;
+      }
+      .table-of-contents li {
+        margin: 0 0 0.25em 0;
+      }
+      .table-of-contents a {
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+      .table-of-contents a:hover,
+      .table-of-contents a:active {
+        text-decoration: underline;
+      }
+    </style>
   </template>
 
   <script>
@@ -35,29 +60,5 @@
       }
     });
   </script>
-
-  <style>
-    .table-of-contents {
-      float: right;
-      width: 40%;
-      background: #eee;
-      font-size: 0.8em;
-      padding: 1em 2em;
-      margin: 0 0 0.5em 0.5em;
-    }
-    .table-of-contents ul {
-      padding: 0;
-    }
-    .table-of-contents li {
-      margin: 0 0 0.25em 0;
-    }
-    .table-of-contents a {
-      text-decoration: none;
-    }
-    .table-of-contents a:hover,
-    .table-of-contents a:active {
-      text-decoration: underline;
-    }
-  </style>
 
 </polymer-element>
